@@ -6,7 +6,7 @@ import './assets/css/styles.css';
 
 function getWeather() {//symbol
   let request = new XMLHttpRequest();
-  const url = `https://api.simpleswap.io/get_currency?api_key=15635da6-8163-42f5-8f20-77ba0f5b5fc6&symbol=btc`;// `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
+  const url = `https://api.simpleswap.io/get_currency?api_key=${process.env.API_KEY}&symbol=btc`;// `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
 
   request.addEventListener("loadend", function() {
     const response = JSON.parse(this.responseText);
